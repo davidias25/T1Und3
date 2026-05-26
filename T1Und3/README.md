@@ -2,8 +2,8 @@
 
 ## 1. Informações Gerais
 * **Nome do Problema:** Dark Roads (Estradas Escuras) 
-* **Link do Problema:** (https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=0&problem=2678&mosmsg=Submission+received+with+ID+31151009) *(Nota: Originalmente publicado como UVa 11631)* 
-* **Linguagem Utilizada:** Java (Versão 17 ou superior)
+* **Link do Problema:** (https://onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&category=0&problem=2678&mosmsg=Submission+received+with+ID+31151009) 
+* **Linguagem Utilizada:** Java 
 * **Integrantes do Grupo:** * *Aaron Magno*
   * *Davi de Paula*
   * *Arthur Soares*

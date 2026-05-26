@@ -17,9 +17,10 @@ A solução foi desenvolvida de forma modular e centralizada em um único arquiv
    ```bash
    javac src/Main.java
 3.Localize o dado de entrada 
+ ```
 cd T1Und3
- java -cp src Main < dados/entradas_do_problema.tx
-   
+ java -cp src Main < dados/entradas_do_problema.txt
+   ``` 
 ## 3. Engenharia e Modelagem do Problema como Grafo Ponderado
 Vértices ($V$): Cada junção de estradas da cidade foi definida como um vértice do grafo. Arestas ($E$): Cada estrada bidirecional que conecta diretamente duas junções foi mapeada como uma aresta não-direcionada. O limite de estradas é dado por $m-1 \le n \le 200.000$.  Pesos/Custos: O comprimento $z$ em metros de cada estrada foi definido como o peso da sua respectiva aresta. Dado que o enunciado fixa o custo de iluminação em exatamente 1 Bytelandian Dollar por metro ao dia , o peso da aresta reflete de forma direta o seu custo financeiro operacional diário.  A restrição fundamental de que os cidadãos devem continuar trafegando por caminhos iluminados entre qualquer par de junções significa que o subgrafo resultante após os cortes deve obrigatoriamente permanecer conectado.  Relacionamento com a MST e Variação AplicadaPara maximizar a economia diária do governo, a meta é encontrar a estrutura de custo mínimo que interconecte todos os vértices da malha urbana sem a presença de ciclos (que representariam gastos e caminhos redundantes). Essa definição equivale ao conceito exato de uma Árvore Geradora Mínima (MST - Minimum Spanning Tree).  A variação do problema de MST padrão aplicada aqui reside na métrica de saída: o objetivo final não é reportar o custo da árvore geradora em si, mas sim a economia máxima obtida através da variação global de custos. Portanto, o algoritmo calcula a soma do peso de todas as arestas lidas na entrada (o custo total original do grafo) e subtrai o peso final da MST gerada, encontrando o montante total poupado. 
 ## Estratégia Algorítmica

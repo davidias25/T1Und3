@@ -8,8 +8,6 @@
   * *Davi de Paula*
   * *Arthur Soares*
 
----
-
 ## 2. Como Executar a Solução
 
 A solução foi desenvolvida de forma modular e centralizada em um único arquivo autônomo dentro do diretório `src/` para garantir total compatibilidade com ambientes de juízes online. Para executar o projeto localmente via terminal, siga as etapas abaixo:
@@ -27,3 +25,4 @@ O limitante dominante da aplicação é o processo de ordenação das arestas, r
 ## Casos Especiais Relevantes
 Risco de Overflow Numérico: A especificação do problema pontua que a soma do comprimento total de todas as vias de um caso de teste é menor do que $2^{31}$. Uma vez que o tipo primitivo int em Java é sinalizado de 32 bits, seu limite superior termina rigorosamente em 2^{31}-1. Acumular a economia ou o custo total em variáveis comuns do tipo int dispararia estouros de bits (overflow). Solução: Uso obrigatório do tipo long (64 bits) para computar as somas e subtrações de custos.  Arestas com Pesos Iguais: Diante de estradas com comprimentos idênticos, a ordenação padrão as organiza de forma arbitrária. Esse comportamento pode induzir a construção de topologias de MST visualmente distintas caso existam caminhos alternativos equipotentes. Contudo, as propriedades matemáticas da MST garantem que o custo mínimo total e o cálculo de variação da economia permaneçam rigorosamente idênticos e invariáveis.Múltiplos Casos de Teste (Isolamento de Escopo): O fluxo de entrada submete múltiplos cenários de teste sequenciais, encerrando as atividades unicamente ao ler a flag de parada $m=n=0$. Para mitigar riscos de vazamento de memória ou contaminação de dados entre cidades distintas, o algoritmo força o reset completo do vetor de IDs do DSU e limpa as referências de arestas a cada nova iteração.  
 ## Comprovação de Sucesso 
+https://github.com/davidias25/T1Und3/blob/main/T1Und3/Evidencias/Captura%20de%20tela%202026-05-26%20135656.png
